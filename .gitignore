@@ -1,0 +1,37 @@
+# Python
+*.pyc
+__pycache__/
+.env
+.venv/
+venv/
+env/
+instance/
+.pytest_cache/
+
+# Node.js
+node_modules/
+.next/
+out/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.env.local
+.DS_Store
+
+# Database
+*.sqlite3
+*.db
+*.db-journal
+sql_app.db # Specific SQLite database file name
+
+# Docker
+.dockerignore
+!docker-compose.yml # Do not ignore docker-compose.yml if it's in the root
+.env.development.local # Example of other local .env files
+
+# IDEs and other tools
+.vscode/
+.idea/
+*.swp
+*.bak
+*.swo

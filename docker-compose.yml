@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: notes_backend_app
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app/backend
+      - ./data:/app/backend/data
+    environment:
+      - DATABASE_URL=sqlite:////app/backend/data/sql_app.db
+      - SECRET_KEY=H4SudekLSmfERnFJcViJ8CS098OK35oof9Fmf78XfhA
+      - ACCESS_TOKEN_EXPIRE_MINUTES=120
+    user: "1000:1000" 
+    command: bash -c "cd /app && uvicorn backend.app.main:app --host 0.0.0.0 --port 8000 --reload"
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        NEXT_PUBLIC_API_BASE_URL: http://backend:8000/api/v1
+    container_name: notes_frontend_app
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app/frontend
+      - /app/frontend/node_modules
+      - /app/frontend/.next
+  
+    environment:
+      - NODE_ENV=development 
+  
+    command: npm run dev
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+volumes:
+  backend_data:
