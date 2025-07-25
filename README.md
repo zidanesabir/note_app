@@ -38,7 +38,7 @@
 
 ### Backend
 - **Framework**: FastAPI (Python)
-- **Database**: SQLModel + SQLite/PostgreSQL
+- **Database**: SQLModel + SQLite
 - **Authentication**: JWT + Passlib
 - **Migrations**: Alembic
 - **Package Manager**: Poetry
@@ -47,7 +47,7 @@
 <td width="50%">
 
 ### Frontend
-- **Framework**: Next.js (React)
+- **Framework**: Next.js 
 - **Styling**: Tailwind CSS
 - **State Management**: React Context API
 - **HTTP Client**: Axios
@@ -163,25 +163,20 @@ npm run dev
 
 The application features a modern, intuitive interface designed for productivity:
 
-### 🏠 Dashboard
-- Clean note grid with search and filtering
-- Quick actions for create, edit, share, and delete
-- Smart pagination and loading states
+### login registre interface
+<img width="1226" height="613" alt="image" src="https://github.com/user-attachments/assets/ed452ae7-17d7-47ca-a0f2-74b2c338f47f" />
 
-### ✏️ Note Editor
-- Full-screen markdown editor with live preview
-- Tag management and visibility controls
-- Auto-save functionality
 
-### 🔔 Notifications
-- Real-time sharing notifications
-- Interactive bell icon with badge count
-- Clear ownership indicators for shared content
+### Note 
+<img width="1275" height="637" alt="image" src="https://github.com/user-attachments/assets/2fd22aa7-b732-469a-b9e9-4ebbecdb5c03" />
+<img width="1183" height="640" alt="image" src="https://github.com/user-attachments/assets/5e1be485-5250-4564-9593-326a3acc645a" />
+<img width="1194" height="597" alt="image" src="https://github.com/user-attachments/assets/7516d340-8e3c-4fac-86f7-c8d11414609e" />
+<img width="1249" height="605" alt="image" src="https://github.com/user-attachments/assets/826e86cf-aa73-4ea8-97eb-a0041cbd4ad5" />
+
 
 ### 📱 Mobile Experience
-- Fully responsive design
-- Touch-optimized interactions
-- Progressive Web App capabilities
+<img width="308" height="555" alt="image" src="https://github.com/user-attachments/assets/e2beb352-4784-4d85-b56c-fada1cd85a5c" />
+
 
 ## 🎯 Usage Guide
 
@@ -199,8 +194,7 @@ The application features a modern, intuitive interface designed for productivity
 3. **Collaboration**
    - Use the "Share" button to invite users by email
    - Recipients see "Shared by: [email]" on shared notes
-   - Check the notification bell for new shared content
-   - Generate public links for broader access
+   
 
 4. **Organization**
    - Filter notes by status (Private/Shared/Public)
