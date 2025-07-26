@@ -1,0 +1,4 @@
+# Docker Compose file for orchestrating the Collaborative Notes Management Application.
+# This file defines the services, networks, and volumes needed to run the entire
+# application stack (FastAPI backend and Next.js frontend) in development mode.
+
