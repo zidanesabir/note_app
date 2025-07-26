@@ -89,29 +89,33 @@ notes-app/
 
 ### 🐳 Docker Setup (Recommended)
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/zidanesabir/note_app.git
-   cd note_app
-   ```
 
-2. **Configure environment variables**
-   ```bash
-   # Backend configuration
-   cp backend/.env.example backend/.env
-   # Edit backend/.env and set a strong SECRET_KEY
-   
-   # Frontend configuration
-   cp frontend/.env.local.example frontend/.env.local
-   # Ensure NEXT_PUBLIC_API_BASE_URL=http://backend:8000/api/v1
-   ```
+This is the easiest and most consistent way to get the entire application running locally.
 
-3. **Launch the application**
-   ```bash
-   docker-compose up --build
-   ```
+1.  **Clone the repository:**
 
-4. **Access the application**
+    ```bash
+    git clone https://github.com/zidanesabir/note_app.git
+    cd note_app
+    ```
+
+2.  **Build and run the Docker containers:**
+    This command will build the Docker images for both backend and frontend (if necessary), set up the network, and start all services.
+
+    ```bash
+    docker-compose up --build
+    ```
+    * This process will download base images, install Python and Node.js dependencies, and build your application. It might take several minutes the first time.
+    * The frontend will be accessible at `http://localhost:3000`.
+    * The backend API (Swagger UI) will be at `http://localhost:8000/api/v1/docs`.
+
+    **To stop the services:**
+
+    ```bash
+    docker-compose down
+    ```
+
+3. **Access the application**
    - 🌐 **Frontend**: http://localhost:3000
    - 📚 **API Docs**: http://localhost:8000/api/v1/docs
 
